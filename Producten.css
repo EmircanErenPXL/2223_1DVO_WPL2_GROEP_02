@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    background-color: #222222;
+}
+
+/*Navigate balk*/
+header img {
+    height: 30px;
+}
+
+#headerend-afb1 {
+    margin-right: 1rem;
+}
+
+.site-header {
+    margin: 3rem 0;
+}
+
+.site-headerwrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-headerstart {
+    margin-left: 2rem;
+}
+
+.site-headerend {
+    margin-right: 2rem;
+}
+
+.navwrapper {
+    display: flex;
+}
+
+.navitem a {
+    margin: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navitem a:hover {
+    color: #03C988;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+
+@media (max-width: 999px) {
+    .navwrapper {
+        display: none;
+    }
+
+    .nav__toggle {
+        display: inline-block;
+        margin-left: 1rem;
+        position: relative;
+    }
+}
+
+
+
+/*Main gedeelte*/
+main {
+    color: #ffffff;
+    text-align: center;
+}
+
+main h1 {
+    font-family: "Akira Expanded", sans-serif;
+}
+
+#Producten-nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem 0;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#Producten-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#Producten-nav a:hover, a:active {
+    border-bottom: 3px solid #03C988;
+    transition: 0.2s all;
+    transition-delay: 0s;
+}
+
+#Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*#Productenlijst-rij2{*/
+/*    margin: 4rem 0;*/
+/*}*/
+.Product-item {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: #333333;
+    border-radius: 15px;
+    margin: 2rem 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.Product-item img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-titel {
+    margin: 1.5rem 0 0 1.5rem;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.Product-item-inhoud {
+    display: flex;
+    margin: 1.5rem;
+    justify-content: space-between;
+}
+
+.product-prijs {
+    font-size: 20px;
+}
+
+.Bestellen {
+    border-radius: 10px;
+    width: 125px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+}
+
+/*Footer gedeelte*/
+footer {
+    background: #1692a5;
+    background: linear-gradient(45deg, #1692a5 0.00%, #09af95 100.00%);
+    padding: 90px 0;
+}
+
+footer .social-icon {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+
+footer .footer-links .link-item {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+footer .footer-map .map-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .footer-map .map-link img {
+    display: block;
+    width: 80%;
+    border-radius: 15px;
+}
+
+footer .footer-contact h2 {
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+footer .footer-contact p {
+    color: #fff;
+    line-height: 1.25rem;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+footer .footer-contact .link-button {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border: #fff 2px solid;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: .5s all;
+}
+
+footer .footer-contact .link-button:hover {
+    padding: 8px 25px;
+    color: #000;
+    background: #fff;
+    transition: .5s all;
+    transition-delay: 100ms;
+}
+
+@media (max-width: 767px) {
+    footer .social-media {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    footer .social-icon {
+        display: inline-block;
+    }
+
+    footer .footer-map .map-link img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
