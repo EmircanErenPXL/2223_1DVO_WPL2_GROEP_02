@@ -67,7 +67,6 @@ header img {
 }
 
 
-
 /*Main gedeelte*/
 main {
     color: #ffffff;
@@ -84,15 +83,16 @@ main h1 {
     margin: 4rem 0;
     list-style-type: none;
     font-size: 25px;
-    font-family: "Source Sans Pro", sans-serif;
 }
 
-#Producten-nav a {
+.Producten-nav-buttons {
     color: #ffffff;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
-#Producten-nav a:hover, a:active {
+.Producten-nav-buttons:hover, .Producten-nav-buttons:active {
     border-bottom: 3px solid #03C988;
     transition: 0.2s all;
     transition-delay: 0s;
@@ -104,11 +104,11 @@ main h1 {
     flex-wrap: wrap;
     width: 1200px;
     margin: 0 auto;
+    /*display: none;*/
 }
-
-/*#Productenlijst-rij2{*/
-/*    margin: 4rem 0;*/
-/*}*/
+#Productenlijst-laadpaal, #Productenlijst-accessoires{
+    display: none;
+}
 .Product-item {
     display: flex;
     flex-direction: column;
