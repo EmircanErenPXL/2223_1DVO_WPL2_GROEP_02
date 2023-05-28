@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -97,12 +98,106 @@ header img {
     border-radius: 25px;
 }
 
-#Hoofdafbeelding {
-    width: 100%;
-}
-
 #Product-naam, #Prijs {
     font-size: 33px;
+}
+
+.mySlides {
+    display: none
+}
+
+.slideshow-container img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.text {
+    color: #d3d3d3;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
 }
 
 .Informatie {
@@ -110,33 +205,68 @@ header img {
     margin-top: 60px;
 }
 
-.Kleine-afbeeldingen {
-    width: 15%;
-    margin: 1rem 10px 0 0;
-}
-
 #Voorraad-Rating {
     display: flex;
 }
 
 #Voorraad {
-    font-size: 25px;
+    font-size: 20px;
+    color: #09af95;
+    margin-right: 10px;
+    border: 1px solid #09af95;
+    border-radius: 10px;
+    text-align: center;
 }
 
 #Rating {
-    margin-left: 25px;
+    font-size: 25px;
+}
+
+#Rating span {
+    font-size: 25px;
+    color: #FFFF00;
+    margin-right: 5px;
+}
+
+#Aantal-Winkelmand {
+    display: flex;
+    align-items: flex-start;
+}
+
+.required {
+    padding: 5px 0;
+    margin-right: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    background: transparent;
 }
 
 #Aantal, #Winkelmand {
     margin-bottom: 10px;
+    width: 200px;
+    padding: 5px 0;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #1692a5, #09af95);
 }
 
-.Check-text {
-    margin-top: -20px;
+#Aantal {
+    margin-right: 10px;
+}
+
+#Winkelmand img {
+    height: 20px;
+    margin-right: 10px;
 }
 
 .Check {
     margin-right: 5px;
+}
+
+.Check-text {
+    margin-top: -20px;
 }
 
 #Productbeschrijving {
@@ -146,18 +276,20 @@ header img {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #Productbeschrijving-titel, #Reviews-titel {
     font-size: 33px;
     border-bottom: 1px solid #ffffff;
+    align-self: flex-start;
+    width: 100%;
 }
 
 .accordion-toon-meer {
     position: relative;
     bottom: -23.5rem;
-    width: 50%;
-    margin-left: 25%;
+    width: 200px;
     padding: 5px 0;
     border: none;
     border-radius: 10px;
@@ -168,98 +300,324 @@ header img {
 .accordion-toon-meer img {
     margin-right: 10px;
 }
+
 .accordion-tekst {
     /*display: none;*/
     overflow: hidden;
     width: 100%;
     height: 460px;
     position: relative;
-    top: -50px;
+    top: -30px;
 }
+
 .Reviews {
     width: 45%;
 }
 
-
-
-/*Footer gedeelte*/
-footer {
-    background: #1692a5;
-    background: linear-gradient(45deg, #1692a5 0.00%, #09af95 100.00%);
-    padding: 90px 0;
-}
-
-footer .social-icon {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: none;
-
-}
-
-footer .footer-links .link-item {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-
-footer .footer-map .map-link {
+#Reviews-overzicht {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-footer .footer-map .map-link img {
-    display: block;
-    width: 80%;
-    border-radius: 15px;
+#Aantal-sterren-gem {
+    font-family: "Akira Expanded", sans-serif;
+    font-size: 75px;
+    margin-top: -22px;
 }
 
-footer .footer-contact h2 {
-    font-size: 20px;
-    color: #fff;
-    padding-bottom: 15px;
-    font-weight: 600;
-}
-
-footer .footer-contact p {
-    color: #fff;
-    line-height: 1.25rem;
-    font-size: 17px;
-    padding: 5px 0;
-}
-
-footer .footer-contact .link-button {
+.Aantal-sterren {
     display: inline-block;
-    padding: 8px 20px;
-    color: #fff;
-    border: #fff 2px solid;
-    border-radius: 15px;
+}
+
+.Beoordeling {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Beoordeling span {
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+    font-size: 25px;
+}
+
+.Beoordeling span:hover {
+    color: #FFFF00;
+    transform: scale(1.3);
+}
+
+.Beoordeling span:hover ~ span {
+    color: #FFFF00;
+}
+
+.Beoordeling span[data-clicked] {
+    color: #FFFF00;
+}
+
+.Beoordeling span[data-clicked] ~ span {
+    color: #FFFF00;
+}
+
+#Reviews-knop {
+    height: 100%;
+    width: 200px;
+    margin-top: 5px;
+    padding: 5px 0;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+}
+
+.row {
+    margin-top: -30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    margin-left: 0;
+}
+
+.rijen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side {
+    float: left;
+    width: 20%;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.side span {
+    color: #FFFF00;
+}
+
+.middle {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+}
+
+.right {
+    text-align: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.bar-5 {
+    width: 60%;
+    height: 10px;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    border-radius: 5px;
+}
+
+.bar-4 {
+    width: 30%;
+    height: 10px;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    border-radius: 5px;
+}
+
+.bar-3 {
+    width: 10%;
+    height: 10px;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    border-radius: 5px;
+}
+
+.bar-2 {
+    width: 4%;
+    height: 10px;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    border-radius: 5px;
+}
+
+.bar-1 {
+    width: 15%;
+    height: 10px;
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    border-radius: 5px;
+}
+
+.geschreven-titel {
+    display: flex;
+    margin: 20px 0 5px 0;
+}
+
+.geschreven-titel span {
+    color: #FFFF00;
+}
+
+.geschreven-titel p {
+    margin-left: 10px;
+}
+
+.geschreven-info img {
+    height: 20px;
+}
+
+.kenmerk {
+    display: flex;
+    align-items: flex-start;
     font-size: 14px;
-    margin-top: 20px;
-    transition: .5s all;
 }
 
-footer .footer-contact .link-button:hover {
-    padding: 8px 25px;
-    color: #000;
-    background: #fff;
-    transition: .5s all;
-    transition-delay: 100ms;
+.uitleg {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
 }
 
-@media (max-width: 767px) {
-    footer .social-media {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+.kenmerk p, .uitleg p {
+    margin-left: 10px;
+}
+
+.geschreven-like {
+    display: flex;
+}
+
+.geschreven-like span {
+    margin-left: 25px;
+}
+
+#aantal-likes {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+
+/*Footer*/
+footer {
+    background: linear-gradient(45deg, #1692a5, #09af95);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+}
+
+.footer-tekst-icons {
+    display: none;
+}
+
+.shortcuts-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.shortcuts-icons a {
+    transition: 0.5s;
+}
+
+.shortcuts-icons a:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+}
+
+.icons-footer {
+    margin: 1rem 0;
+}
+
+.shortcuts-nav ul {
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.shortcuts-nav ul li {
+    list-style-type: none;
+    line-height: 1.8rem;
+}
+
+.shortcuts-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+
+.shortcuts-nav ul li a:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+}
+
+.iframe-footer {
+    border-radius: 15px;
+}
+
+.shortcuts-contact p {
+    text-decoration: underline;
+}
+
+.shortcuts-contact a {
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+
+.shortcuts-contact a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    mix-blend-mode: lighten;
+}
+
+@media screen and (max-width: 999px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 25px 0;
     }
 
-    footer .social-icon {
+    .footer-tekst-icons {
         display: inline-block;
+        margin-bottom: 10px;
     }
 
-    footer .footer-map .map-link img {
-        margin-bottom: 20px;
-        width: 100%;
+    .shortcuts-icons {
+        flex-direction: row;
+    }
+
+    .icons-footer {
+        margin: 0 0.75rem;
+    }
+
+    .shortcuts-nav {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .shortcuts-nav ul li {
+        line-height: 1.5rem;
+    }
+
+    .shortcuts-nav ul li a:hover {
+        font-weight: bold;
+    }
+
+    .iframe-footer {
+        display: none;
+    }
+
+    .shortcuts-contact {
+        text-align: center;
     }
 }

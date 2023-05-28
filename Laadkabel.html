@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="bootstrap-grid.min.css">
     <link rel="stylesheet" href="bootstrap-reboot.min.css">
     <link rel="stylesheet" href="assets/css/Laadkabel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
     <script defer src="assets/js/Laadkabel.js"></script>
 </head>
 <body>
@@ -37,22 +41,84 @@
     <div id="deel1">
         <div class="Afbeeldingen">
             <p id="Product-naam">Laadpaal pakket L</p>
-            <img id="Hoofdafbeelding" data-image="black" src="assets/images/Laadkabel%20foto%201.png" alt="afbeelding 1"><br>
-            <img class="Kleine-afbeeldingen" src="assets/images/Laadkabel%20foto%202.png" alt="afbeelding 2">
-            <img class="Kleine-afbeeldingen" src="assets/images/Laadkabel%20foto%203.png" alt="afbeelding 3">
-            <img class="Kleine-afbeeldingen" src="assets/images/Laadkabel%20foto%204.png" alt="afbeelding 4">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="assets/images/Laadkabel%20foto%201.png" alt="afbeelding 1">
+                    <div class="text">Afbeelding 1</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="assets/images/Laadkabel%20foto%202.png" alt="afbeelding 2">
+                    <div class="text">Afbeelding 2</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="assets/images/Laadkabel%20foto%203.png" alt="afbeelding 3">
+                    <div class="text">Afbeelding 3</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="assets/images/Laadkabel%20foto%204.png" alt="afbeelding 4">
+                    <div class="text">Afbeelding 4</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
         </div>
         <div class="Informatie">
             <div class="Product-essentie">
                 <p id="Prijs">€169,99</p>
                 <div id="Voorraad-Rating">
-                    <p id="Voorraad"></p>
-                    <p id="Rating"><img src="assets/images/Rating.png" alt="Rating ster"></p>
+                    <p id="Voorraad">Op voorraad</p>
+                    <p id="Rating"><span>&#9733;</span>4.5/5</p>
                 </div>
                 <p>Voor 15:00 uur besteld, morgen in huis.</p>
                 <div id="Aantal-Winkelmand">
-                    <button id="Aantal"></button>
-                    <button id="Winkelmand"><img src="assets/images/Shopping%20Cart.png" alt="Winkelmand"> In winkelwagen
+                    <p class="cart-attribute__field">
+                        <label for="quantity"></label><select required class="required" id="quantity"
+                                                              name="attributes[Quantity]">
+<!--                        <option value="1" {% if cart.attributes[-->
+<!--                        "Quantity"] == "1" %} selected{% endif %}>1</option>-->
+<!--                        <option value="2" {% if cart.attributes[-->
+<!--                        "Quantity"] == "2" %} selected{% endif %}>2</option>-->
+<!--                        <option value="3" {% if cart.attributes[-->
+<!--                        "Quantity"] == "3" %} selected{% endif %}>3</option>-->
+<!--                        <option value="4" {% if cart.attributes[-->
+<!--                        "Quantity"] == "4" %} selected{% endif %}>4</option>-->
+<!--                        <option value="5" {% if cart.attributes[-->
+<!--                        "Quantity"] == "5" %} selected{% endif %}>5</option>-->
+<!--                        <option value="6" {% if cart.attributes[-->
+<!--                        "Quantity"] == "6" %} selected{% endif %}>6</option>-->
+<!--                        <option value="7" {% if cart.attributes[-->
+<!--                        "Quantity"] == "7" %} selected{% endif %}>7</option>-->
+<!--                        <option value="8" {% if cart.attributes[-->
+<!--                        "Quantity"] == "8" %} selected{% endif %}>8</option>-->
+<!--                        <option value="9" {% if cart.attributes[-->
+<!--                        "Quantity"] == "9" %} selected{% endif %}>9</option>-->
+<!--                        <option value="10" {% if cart.attributes[-->
+<!--                        "Quantity"] == "10" %} selected{% endif %}>10</option>-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    </p>
+                    <button id="Winkelmand"><img src="assets/images/Shopping%20Cart.png" alt="Winkelmand"> In
+                        winkelwagen
                     </button>
                 </div>
                 <p><img class="Check" src="assets/images/Check%20Icon.png" alt="Check Icon">Bestellen en betalen via
@@ -67,7 +133,9 @@
     <div id="deel2">
         <div id="Productbeschrijving">
             <p id="Productbeschrijving-titel">Productbeschrijving</p>
-            <button class="accordion-toon-meer" id="accordion-toon-meer"><img id="pijl" src="assets/Arrow-down.png" alt="Pijl naar beneden">Toon meer
+            <button class="accordion-toon-meer" id="accordion-toon-meer"><img id="pijl"
+                                                                              src="assets/images/Arrow-down.png"
+                                                                              alt="Pijl naar beneden">Toon meer
             </button>
             <div class="accordion-tekst" id="accordion-tekst">
                 <p>Deze laadkabel is de perfecte oplossing voor het opladen van uw
@@ -95,55 +163,204 @@
         </div>
         <div class="Reviews">
             <p id="Reviews-titel">Reviews</p>
-            <div id="Aantaal-sterren">
+            <div id="Reviews-overzicht">
+                <p id="Aantal-sterren-gem">4.5</p>
+                <div class="Aantal-sterren">
+                    <div data-productid="1" class="Beoordeling">
+                        <span data-rating="5">&#9733;</span>
+                        <span data-rating="4">&#9733;</span>
+                        <span data-rating="3">&#9733;</span>
+                        <span data-rating="2">&#9733;</span>
+                        <span data-rating="1">&#9733;</span>
+                    </div>
+                    <p>254 reviews</p>
+                </div>
+                <button id="Reviews-knop" role="button" type="button">Schrijf een review</button>
+                <!--                &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+                <!--                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
+                <!--                    Launch static backdrop modal-->
+                <!--                </button>-->
 
+                <!--                &lt;!&ndash; Modal &ndash;&gt;-->
+                <!--                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
+                <!--                    <div class="modal-dialog">-->
+                <!--                        <div class="modal-content">-->
+                <!--                            <div class="modal-header">-->
+                <!--                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>-->
+                <!--                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                <!--                            </div>-->
+                <!--                            <div class="modal-body">-->
+                <!--                                ...-->
+                <!--                            </div>-->
+                <!--                            <div class="modal-footer">-->
+                <!--                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                <!--                                <button type="button" class="btn btn-primary">Understood</button>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+            <div class="row">
+                <div class="rijen">
+                    <div class="side">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>150</div>
+                    </div>
+                </div>
+                <div class="rijen">
+                    <div class="side">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                </div>
+                <div class="rijen">
+                    <div class="side">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>15</div>
+                    </div>
+                </div>
+                <div class="rijen">
+                    <div class="side">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>6</div>
+                    </div>
+                </div>
+                <div class="rijen">
+                    <div class="side">
+                        <span>&#9733;</span>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>20</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Reviews-geschreven">
+                <div class="geschreven">
+                    <div class="geschreven-titel">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <p>Overzichtelijke lader en makkelijk geïnstalleerd</p>
+                    </div>
+                    <div class="geschreven-info">
+                        <div class="kenmerk">
+                            <img src="assets/images/icons/awesome-plus.png" alt="plus icon">
+                            <p>Mooi design</p>
+                        </div>
+                        <div class="kenmerk">
+                            <img src="assets/images/icons/awesome-plus.png" alt="plus icon">
+                            <p>Nauwkeurige meting</p>
+                        </div>
+                        <div class="kenmerk">
+                            <img src="assets/images/icons/awesome-plus.png" alt="plus icon">
+                            <p>Mooi materiaal</p>
+                        </div>
+                        <div class="uitleg">
+                            <img src="assets/images/icons/Profiel.png" alt="profiel icon">
+                            <p>Mooie lader voro binnen of buiten. Overzichtelijk display en plug and play.</p>
+                        </div>
+                    </div>
+                    <div class="geschreven-like">
+                        <p>Vind je dit een nuttige review?</p>
+                        <span>&hearts;</span>
+                        <p id="aantal-likes">2</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!--    <div class="Aantal-sterren">-->
+    <!--        <div data-productid="2" class="Beoordeling">-->
+    <!--            <span data-rating="5">&#9733;</span>-->
+    <!--            <span data-rating="4">&#9733;</span>-->
+    <!--            <span data-rating="3">&#9733;</span>-->
+    <!--            <span data-rating="2">&#9733;</span>-->
+    <!--            <span data-rating="1">&#9733;</span>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="Aantal-sterren">-->
+    <!--        <div data-productid="3" class="Beoordeling">-->
+    <!--            <span data-rating="5">&#9733;</span>-->
+    <!--            <span data-rating="4">&#9733;</span>-->
+    <!--            <span data-rating="3">&#9733;</span>-->
+    <!--            <span data-rating="2">&#9733;</span>-->
+    <!--            <span data-rating="1">&#9733;</span>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </main>
 <footer>
-    <div class="wrapper">
-        <div class="row">
-            <div class="col-12 col-md-2">
-                <div class="social-media">
-                    <a href="" class="social-icon"><img src="assets/images/icons/awesome-facebook.png"
-                                                        alt="facebook icon"></a>
-                    <a href="" class="social-icon"><img src="assets/images/icons/awesome-instagram.png"
-                                                        alt="instagram icon"></a>
-                    <a href="" class="social-icon"><img src="assets/images/icons/awesome-linkedin.png"
-                                                        alt="linkedin icon"></a>
-                </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="footer-links">
-                    <a href="index.html" class="link-item">MyPower</a>
-                    <a href="Producten.html" class="link-item">Producten</a>
-                    <a href="community.html" class="link-item">Community</a>
-                    <a href="over-ons.html" class="link-item">Over ons</a>
-                    <a href="faq.html" class="link-item">Veelgestelde vragen</a>
-                    <a href="contact-us.html" class="link-item">Contact</a>
-                    <a href="#" class="link-item">Dashboard</a>
-                </div>
-            </div>
-            <div class="col-12 col-md-5">
-                <div class="footer-map">
-                    <a href="" class="map-link"><img src="assets/images/footer.png" alt="footer"></a>
-                    <img src="#" alt="footer">
-                </div>
-            </div>
-            <div class="col-12 col-md-2">
-                <div class="footer-contact">
-                    <h2>CONTACT</h2>
-                    <p>
-                        info@mypower.com
-                        <br>
-                        011587426
-                    </p>
-                    <p>Elfde-Liniestraat <br>3500 Hasselt</p>
-                    <a href="contact-us.html" class="link-button">Contact</a>
-                </div>
-            </div>
-        </div>
+    <h3 class="footer-tekst-icons">Volg ons ook op:</h3>
+    <div class="shortcuts-icons">
+        <a href="#"><img class="icons-footer" src="assets/images/icons/awesome-facebook.png" alt="facebook"></a>
+        <a href="#"><img class="icons-footer" src="assets/images/icons/awesome-instagram.png" alt="instagram"></a>
+        <a href="#"><img class="icons-footer" src="assets/images/icons/awesome-linkedin.png" alt="linkedin"></a>
+    </div>
+    <div class="shortcuts-nav">
+        <ul>
+            <li><a href="index.html">MyPower</a></li>
+            <li><a href="Producten.html">Producten</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="faq.html">Veelgestelde vragen</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7308.8375027003885!2d5.3583206086535995!3d50.95326009215729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1214285548b13%3A0xed3def18ce40a171!2sCorda%20Campus!5e0!3m2!1snl!2sbe!4v1684920107781!5m2!1snl!2sbe"
+                width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="iframe-footer"></iframe>
+    </div>
+    <div class="shortcuts-contact">
+        <h1>CONTACT</h1>
+        <p>info@mypower.com<br>011587426</p>
+        <p>Elfde-Liniestraat<br>3500 Hasselt</p>
+        <a href="contact-us.html" role="button" type="button">Contact</a>
     </div>
 </footer>
 </body>
