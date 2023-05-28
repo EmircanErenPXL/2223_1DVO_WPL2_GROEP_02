@@ -5,6 +5,11 @@
     font-family: "Source Sans Pro", sans-serif;
 }
 
+@font-face {
+    font-family: "Akira Expanded";
+    src: url("../fonts/Akira-Expanded-Demo.ttf");
+}
+
 body {
     background-color: #222222;
 }
