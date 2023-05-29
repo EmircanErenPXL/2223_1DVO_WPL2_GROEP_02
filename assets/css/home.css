@@ -20,6 +20,12 @@ body h1, body h2 {
 
 
 /*Navigate balk*/
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
 header img {
     height: 30px;
 }
@@ -49,10 +55,19 @@ header img {
     display: flex;
 }
 
+.navitem {
+    list-style-type: none;
+}
+
+.navitem ul {
+    list-style-type: none;
+}
+
 .navitem a {
     margin: 1rem;
     color: #ffffff;
     text-decoration: none;
+    list-style-type: none;
 }
 
 .navitem a:hover {
@@ -74,6 +89,15 @@ header img {
         margin-left: 1rem;
         position: relative;
     }
+}
+
+/*main gedeelte*/
+#index-achtergrond {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .index-tekst p {
@@ -124,6 +148,13 @@ header img {
 
 .section3 {
     background-color: #222222;
+}
+
+.section
+
+3
+img {
+    margin-bottom: 2rem;
 }
 
 
