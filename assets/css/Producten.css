@@ -225,6 +225,10 @@ main h1 {
     display: none;
 }
 
+
+.Productenlijst-titel{
+    display: none;
+}
 #Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires {
     display: flex;
     justify-content: space-evenly;
@@ -278,6 +282,23 @@ main h1 {
     color: #ffffff;
     background: linear-gradient(45deg, #1692a5, #09af95);
 }
+@media screen and (max-width: 1200px){
+    #Producten-nav{
+        display: none;
+    }
+    .Productenlijst-titel{
+        display: inline-grid;
+        font-size: 2rem;
+        text-align: left;
+        margin-top: 1rem;
+    }
+    #Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: inline-grid;
+    }
+    .Product-item{
 
 @media screen and (max-width: 1200px) {
     #Producten-nav {
@@ -303,6 +324,9 @@ main h1 {
     }
 }
 
+
+    }
+}
 /*Footer gedeelte*/
 footer {
     background: linear-gradient(45deg, #1692a5, #09af95);
@@ -311,6 +335,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     height: 400px;
+    width: 100%;
 }
 
 .footer-tekst-icons {
