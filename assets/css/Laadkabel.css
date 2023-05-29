@@ -183,7 +183,6 @@ header img {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -198,7 +197,6 @@ header img {
     }
 }
 
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev, .next, .text {
         font-size: 11px
@@ -216,6 +214,7 @@ header img {
 
 #Voorraad {
     font-size: 20px;
+    padding: 5px;
     color: #09af95;
     margin-right: 10px;
     border: 1px solid #09af95;
@@ -502,8 +501,78 @@ header img {
     margin-left: 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
+    #deel1 {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .Afbeeldingen {
+        width: 90%;
+    }
+
+    .Informatie {
+        width: 90%;
+    }
+
+    /*#Voorraad-Rating {*/
+    /*    display: flow;*/
+    /*    position: relative;*/
+    /*    top: -4rem;*/
+    /*    right: -10rem;*/
+    /*}*/
+
+    #Voorraad {
+        margin-right: 3.5rem;
+    }
+
+    #deel2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    #Productbeschrijving {
+        width: 90%;
+        text-align: center;
+    }
+
+    .Reviews {
+        width: 90%;
+    }
+
+    .side {
+        width: 25%;
+    }
+
+    .middle {
+        width: 60%;
+    }
+
+    .right {
+        width: 5%;
+        text-align: right;
+    }
+
+    #Reviews-overzicht {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Aantal-sterren {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Reviews-knop {
+        width: 100%;
+        margin-top: -1.5rem;
+    }
+
+    .row {
+        margin-top: 0.5rem;
+    }
 }
 
 
