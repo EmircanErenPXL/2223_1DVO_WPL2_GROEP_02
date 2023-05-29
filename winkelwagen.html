@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winkelwagen</title>
+    <link rel="stylesheet" href="assets/css/winkelwagen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;
+    0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="container">
+    <h1 class="heading">
+        <ion-icon name="cart-outline"></ion-icon> Winkelwagen
+    </h1>
+
+    <div class="item-flex">
+        <section class="checkout">
+            <h2 class="section-heading">Betaling Details</h2>
+            <div class="payment-form">
+                <div class="payment-method">
+                    <button class="method selected">
+                        <ion-icon name="card"></ion-icon>
+
+                        <span>Credit Card</span>
+
+                        <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                    </button>
+
+                    <button class="method">
+                        <ion-icon name="logo-paypal"></ion-icon>
+
+                        <span>PayPal</span>
+
+                        <ion-icon class="checkmark fill" name="checkmark-circle-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <form action="#">
+                    <div class="cardholder-name">
+                        <label for="cardholder-name" class="label-default">Naam Kaarthouder</label>
+                        <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                    </div>
+
+                    <div class="card-number">
+                        <label for="card-number" class="label-default">Kaartnummer</label>
+                        <input type="number" name="card-number" id="card-number" class="input-default">
+                    </div>
+
+                    <div class="input-flex">
+
+                        <div class="expire-date">
+                            <label for="expire-date" class="label-default">Vervaldatum</label>
+
+                            <div class="input-flex">
+                                <input type="number" name="dag" id="expire-date" placeholder="31" min="1" max="31" class="input-default">
+                                /
+                                <input type="number" name="maand" id="expire-date" placeholder="12" min="1" max="12" class="input-default">
+                            </div>
+
+                            <div class="cvv">
+                                <label for="cvv" class="label-default">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="input-default">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button class="btn btn-primary">
+                <b>Betaal</b> € <span id="payAmount">315.15</span>
+            </button>
+        </section>
+
+        <section class="cart">
+            <div class="cart-item-box">
+                <h2 class="section-heading">Overzicht van je bestelling</h2>
+
+                <div class="product-card">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="assets/images/Laadkabel%20foto%201.png" alt="Laadkabel" width="150px" class="product-img">
+                        </div>
+
+                        <div class="detail">
+                            <h4 class="product-name">Laadkabel</h4>
+
+                            <div class="wrapper">
+                                <div class="product-qty">
+                                    <button id="decrement">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+
+                                    <span id="quanity">1</span>
+
+                                    <button id="increment">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+
+                                <div class="price">
+                                    € <span id="price">315.15</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="product-close-btn">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="assets/images/Laadkabel%20foto%201.png" alt="Laadkabel" width="150px" class="product-img">
+                        </div>
+
+                        <div class="detail">
+                            <h4 class="product-name">Laadkabel</h4>
+
+                            <div class="wrapper">
+                                <div class="product-qty">
+                                    <button id="decrement">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+
+                                    <span id="quanity">1</span>
+
+                                    <button id="increment">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+
+                                <div class="price">
+                                    € <span id="price">315.15</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="product-close-btn">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="discount-token">
+                    <label for="discount-token" class="label-default">Kortingscode</label>
+
+                    <div class="wrapper-flex">
+                        <input type="text" name="discount-token" id="discount-token" class="input-default">
+
+                        <button class="btn btn-outline">Toepassen</button>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="subtotal">
+                        <span>Subtotaal</span> <span>€ <span id="subtotal"></span>315.15</span>
+                    </div>
+
+                    <div class="tax">
+                        <span>BTW</span> <span>€ <span id="tax"></span>52.23</span>
+                    </div>
+
+                    <div class="shipping">
+                        <span>Verzendkosten</span> <span>€ <span id="shipping"></span>0.00</span>
+                    </div>
+
+                    <div class="total">
+                        <span>Totaal</span> <span>€ <span id="total"></span>385.25</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+<script src="assets/js/winkelwagen.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
