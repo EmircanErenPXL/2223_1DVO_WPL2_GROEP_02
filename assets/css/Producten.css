@@ -229,6 +229,7 @@ main h1 {
 .Productenlijst-titel{
     display: none;
 }
+
 #Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires {
     display: flex;
     justify-content: space-evenly;
@@ -267,6 +268,7 @@ main h1 {
     display: flex;
     margin: 1.5rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 .product-prijs {
@@ -279,26 +281,36 @@ main h1 {
     font-size: 24px;
     text-align: center;
     border: none;
+    text-decoration: none;
+    list-style-type: none;
     color: #ffffff;
     background: linear-gradient(45deg, #1692a5, #09af95);
 }
-@media screen and (max-width: 1200px){
-    #Producten-nav{
+
+.Bestellen a:hover {
+    color: #09af95;
+}
+
+@media screen and (max-width: 1200px) {
+    #Producten-nav {
         display: none;
     }
-    .Productenlijst-titel{
+
+    .Productenlijst-titel {
         display: inline-grid;
         font-size: 2rem;
         text-align: left;
         margin-top: 1rem;
     }
-    #Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires{
+
+    #Productenlijst-pakketten, #Productenlijst-laadpaal, #Productenlijst-accessoires {
         flex-direction: column;
         align-items: center;
         width: 100%;
         display: inline-grid;
     }
-    .Product-item{
+
+    .Product-item {
 
 @media screen and (max-width: 1200px) {
     #Producten-nav {
@@ -327,6 +339,7 @@ main h1 {
 
     }
 }
+
 /*Footer gedeelte*/
 footer {
     background: linear-gradient(45deg, #1692a5, #09af95);

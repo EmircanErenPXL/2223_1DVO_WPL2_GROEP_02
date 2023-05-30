@@ -20,12 +20,6 @@ body h1, body h2 {
 
 
 /*Navigate balk*/
-header {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-}
-
 header img {
     height: 30px;
 }
@@ -55,19 +49,10 @@ header img {
     display: flex;
 }
 
-.navitem {
-    list-style-type: none;
-}
-
-.navitem ul {
-    list-style-type: none;
-}
-
 .navitem a {
     margin: 1rem;
     color: #ffffff;
     text-decoration: none;
-    list-style-type: none;
 }
 
 .navitem a:hover {
@@ -83,6 +68,24 @@ header img {
     /*justify-content: space-around;*/
     /*width: 50%;*/
     /*text-transform: uppercase;*/
+    display: none;
+}
+
+
+.nav-links a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s ease;
+    transform: translateX(0%);
+}
+
+.nav-links a:hover {
+    color: #03C988;
+}
+
+.burger {
     display: none;
 }
 
@@ -200,6 +203,7 @@ header img {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
 
 .toggle .line1 {
@@ -213,6 +217,19 @@ header img {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 /*main gedeelte*/
 #index-achtergrond {
