@@ -12,7 +12,8 @@
     <title>MyPower</title>
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script defer src="assets/js/script.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -33,10 +34,20 @@
                 </nav>
             </div>
             <div class="site-headerend">
-                <a href="#"><img id="headerend-afb1" src="assets/images/icons/Profiel.png" alt="Login"></a>
-                <a href="#"><img src="assets/images/icons/cart.png" alt="Cart"></a>
-                <img class="nav__toggle" aria-expanded="false" type="button" src="assets/images/icons/menu.png"
-                     alt="Cart">
+                <a id="nav-profiel" href="login.html"><img id="headerend-afb1" src="assets/images/icons/Profiel.png" alt="Login"></a>
+                <a id="nav-cart" href="winkelwagen.html"><img src="assets/images/icons/cart.png" alt="Cart"></a>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="navitem-2"><a href="index.html">Home</a></li>
+                    <li class="navitem-2"><a href="Producten.html">Producten</a></li>
+                    <li class="navitem-2"><a href="community.html">Community</a></li>
+                    <li class="navitem-2"><a href="over-ons.html">Over Ons</a></li>
+                    <li class="navitem-2"><a href="contact-us.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </header>

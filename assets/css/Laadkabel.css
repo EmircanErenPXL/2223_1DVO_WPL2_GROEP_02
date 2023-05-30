@@ -59,8 +59,41 @@ header img {
     display: none;
 }
 
+.nav-links {
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*width: 50%;*/
+    /*text-transform: uppercase;*/
+    display: none;
+}
 
-@media (max-width: 999px) {
+.nav-links a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s ease;
+    transform: translateX(0%);
+}
+
+.nav-links a:hover {
+    color: #03C988;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+    margin: 5px 0;
+    transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 999px) {
     .navwrapper {
         display: none;
     }
@@ -70,7 +103,98 @@ header img {
         margin-left: 1rem;
         position: relative;
     }
+
+    .site-headerend {
+        display: flex;
+    }
+
+    #nav-cart {
+        margin-right: 1rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 1rem;
+        font-weight: bold;
+        border-radius: 15px;
+        top: 6rem;
+        min-height: 5rem;
+        height: 200px;
+        background: #ffffff;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 125px;
+        margin: 0;
+        padding-left: 15px;
+        transform: translateX(100%);
+        transition: All 0.5s ease-in;
+        z-index: 100;
+    }
+
+    .nav-links a {
+        opacity: 0;
+        color: #222222;
+        list-style-type: none;
+        z-index: 100;
+
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        bottom: 0;
+    }
+
 }
+
+@media only screen and (max-width: 640px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 460px) {
+    .nav-links {
+        width: 100%;
+        transition: All 0.5s ease;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 
 /*Main gedeelte*/
