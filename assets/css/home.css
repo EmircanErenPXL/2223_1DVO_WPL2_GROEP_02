@@ -136,7 +136,7 @@ header img {
 
     .nav-links {
         position: absolute;
-        right: 1rem;
+        right: 0;
         font-weight: bold;
         border-radius: 15px;
         top: 6rem;
