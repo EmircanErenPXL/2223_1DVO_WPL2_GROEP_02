@@ -93,6 +93,19 @@ header img {
     transition: all 0.5s ease;
 }
 
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+    margin: 5px 0;
+    transition: all 0.5s ease;
+}
+
 @media only screen and (max-width: 999px) {
     .navwrapper {
         display: none;
@@ -187,6 +200,12 @@ header img {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
 .toggle .line2 {
     opacity: 0;
 }
@@ -194,8 +213,6 @@ header img {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-
-
 
 /*Main gedeelte*/
 .container {
@@ -637,15 +654,11 @@ header img {
 
     .Informatie {
         width: 90%;
+
+        margin-top: 0;
     }
 
-    /*#Voorraad-Rating {*/
-    /*    display: flow;*/
-    /*    position: relative;*/
-    /*    top: -4rem;*/
-    /*    right: -10rem;*/
-    /*}*/
-
+    }
     #Voorraad {
         margin-right: 3.5rem;
     }
@@ -689,6 +702,38 @@ header img {
         align-items: center;
     }
 
+    #Productbeschrijving {
+        width: 90%;
+        text-align: center;
+    }
+
+    .Reviews {
+        width: 90%;
+    }
+
+    .side {
+        width: 25%;
+    }
+
+    .middle {
+        width: 60%;
+    }
+
+    .right {
+        width: 5%;
+        text-align: right;
+    }
+
+    #Reviews-overzicht {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Aantal-sterren {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #Reviews-knop {
         width: 100%;
         margin-top: -1.5rem;

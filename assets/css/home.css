@@ -71,6 +71,24 @@ header img {
     display: none;
 }
 
+
+.nav-links a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s ease;
+    transform: translateX(0%);
+}
+
+.nav-links a:hover {
+    color: #03C988;
+}
+
+.burger {
+    display: none;
+}
+
 .nav-links a {
     display: block;
     text-transform: uppercase;
@@ -185,6 +203,19 @@ header img {
         opacity: 1;
         transform: translateX(0);
     }
+
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .toggle .line1 {
